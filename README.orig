@@ -1,0 +1,50 @@
+---------------------------------------------------------------------------
+Package:     CSS vim compiler file
+Version:     0.1
+Author:      Cosimo <cosimo@cpan.org>
+Last update: 2006/06/13
+---------------------------------------------------------------------------
+
+* SUMMARY 
+
+This compiler script allows to validate CSS files within vim,
+through W3C's CSS validation web-service.
+
+The compiler file invokes a helper perl script that connects to jigsaw.w3.org
+and reports all css errors and warnings, showing them up directly in the vim
+buffer (with :copen command, BTW), like gcc, or javac, ...
+
+The script can be made better in many ways.
+If you have suggestions, you are welcome.
+
+* REQUIREMENTS
+
+  - a recent perl interpreter installed
+  - WebService::Validator::CSS::W3C module installed from CPAN.
+
+* INSTALLATION
+
+  Installation is done in two simple steps:
+
+  1) Copy the css.vim compiler file to your vim's compiler
+     folder (usually /usr/share/vim/vimxx/compiler)
+   
+  2) Copy the `validate_css' perl script to your favourite binary
+     folder (usually /usr/local/bin will do). This folder should
+     be in your $PATH.
+    
+  For the perl script to work, you should have WebService::Validator::W3C::CSS
+  perl module installed.
+  
+  If you don't have this module installed, the script will prompt you
+  and try to install it automatically from CPAN.
+  If you don't succeed, try the following command on your shell:
+
+    perl -MCPAN -e 'install WebService::Validator::W3C::CSS'
+
+  If even this does not succeed, point your browser to:
+
+    http://cpan.perl.org/misc/cpan-faq.html#How_install_Perl_modules
+  
+  and follow the instructions.
+

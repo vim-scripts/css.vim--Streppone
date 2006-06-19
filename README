@@ -1,0 +1,11 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=1577
+
+This compiler script allows to validate CSS files within vim, through W3C's CSS validation web-service. The compiler file invokes a helper perl script that connects to jigsaw.w3.org and reports all css errors and warnings, showing them up directly in the vim buffer (with :copen command, BTW).
+
+Surely the script can be made better in many ways.
+Suggestions welcome!
+
+REQUIREMENTS:
+- a [dr]ecent perl interpreter installed
+- WebService::Validator::CSS::W3C module installed from CPAN.
+
